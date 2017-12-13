@@ -14,3 +14,7 @@ The json log enteries are stored in a log file. Filebeat and Logstash configurat
 java -jar target/demo-0.0.1-SNAPSHOT.jar 
 ## Log File Name & Location
 The log file would be created as build/demo.json
+## Tail Log File with Pretty View of JSON Log Enteries
+tail -f build/demo.json | jq
+
+JQ is available https://stedolan.github.io/jq/
