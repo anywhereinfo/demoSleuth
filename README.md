@@ -1,4 +1,4 @@
-# demoSleuth
+# SpringBoot, Logback, Sleuth - ELK Integration
 Demo that uses logback, logstash-logback-encoder, sleuth and dropwizard to :
 - Generate application logs in json using logstash-logback-encoder and logback
 - Create custom key value pairs in json
