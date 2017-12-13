@@ -21,7 +21,7 @@ public class SleuthController {
 	public String  helloSleuth() {
 		int x = (int) Math.floor(new Random().nextInt(10));
 		//custom field
-		log.info("log message {}", keyValue("name", "value"));
+		log.info("log message {}", keyValue("oidc-access-key", "fsjdfjkdhsfkdjshfdsh"));
 		
 		if (x%2 ==0)
 		{
