@@ -4,7 +4,7 @@ Demo that uses logback, logstash-logback-encoder, sleuth and dropwizard to :
 - Create custom key value pairs in json
 - Logging aspect to capture timing for Rest Controllers and Services
 - Sleuth adds trace id and span id for log corelation
-![IELK.jpg]
+![ELK](ELK.jpg)
 
 The json log enteries are stored in a log file. Filebeat and Logstash configuration files are provided. If you have FilebeatAgent, Logstash, ElasticSearch and Kibana running using the configuration files, you can build kibana dashboards
 
