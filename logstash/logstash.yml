@@ -211,4 +211,8 @@
 #
 # Where to find custom plugins
 # path.plugins: []
-
+xpack.monitoring.enabled: true
+xpack.monitoring.elasticsearch.url: ["https://ideasforsharing.com:9200"]
+xpack.monitoring.elasticsearch.username: logstash_system
+xpack.monitoring.elasticsearch.password: elijah12
+xpack.monitoring.elasticsearch.ssl.ca: "/Users/mbatth/software/elasticsearch-6.0.1/config/certs/ca/ca.crt"

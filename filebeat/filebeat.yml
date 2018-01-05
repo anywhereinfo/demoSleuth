@@ -155,17 +155,17 @@ setup.kibana:
 #----------------------------- Logstash output --------------------------------
 output.logstash:
   # The Logstash hosts
-  hosts: ["localhost:5044"]
+  hosts: ["okm-mac-m1gtdy.local:5044"]
 
   # Optional SSL. By default is off.
   # List of root certificates for HTTPS server verifications
-  #ssl.certificate_authorities: ["/etc/pki/root/ca.pem"]
+  ssl.certificate_authorities: ["/Users/mbatth/software/logstash-6.0.0/config/certs/ca/ca.crt"]
 
   # Certificate for SSL client authentication
-  #ssl.certificate: "/etc/pki/client/cert.pem"
+  ssl.certificate: "/Users/mbatth/software/filebeat-6.0.0-darwin-x86_64/certs/okm-mac-m1gtdy.local/okm-mac-m1gtdy.local.crt"
 
   # Client Certificate Key
-  #ssl.key: "/etc/pki/client/cert.key"
+  ssl.key: "/Users/mbatth/software/filebeat-6.0.0-darwin-x86_64/certs/okm-mac-m1gtdy.local/okm-mac-m1gtdy.local.key"
 
 #================================ Logging =====================================
 
@@ -177,3 +177,4 @@ output.logstash:
 # To enable all selectors use ["*"]. Examples of other selectors are "beat",
 # "publish", "service".
 #logging.selectors: ["*"]
+
