@@ -40,7 +40,7 @@ node.name: node1
 #
 # Lock the memory on startup:
 #
-#bootstrap.memory_lock: true
+bootstrap.memory_lock: true
 #
 # Make sure that the heap size is set to about half the memory available
 # on the system and that the owner of the process is allowed to use this
@@ -91,3 +91,38 @@ xpack.ssl.certificate: certs/${node.name}/${node.name}.crt
 xpack.ssl.certificate_authorities: certs/ca/ca.crt
 xpack.security.transport.ssl.enabled: true
 xpack.security.http.ssl.enabled: true
+
+
+xpack.security.authc.realms.native.type: native
+xpack.security.authc.realms.native.order: 0
+
+
+#xpack.security.authc.realms.ldap1.type: ldap
+#xpack.security.authc.realms.ldap1.url: "ldaps://miokmsinfwvp01.ddmi.intra.renhsc.com:636"
+#xpack.security.authc.realms.ldap1.bind_dn: "cn=admin,dc=ideasforsharing,dc=com"
+#xpack.security.authc.realms.ldap1.bind_password: elijah12
+#xpack.security.authc.realms.ldap1.user_search.base_dn: "dc=ideasforsharing,dc=com"
+#xpack.security.authc.realms.ldap1.user_search.attribute: uid
+#xpack.security.authc.realms.ldap1.group_search.base_dn: "dc=ideasforsharing,dc=com"
+#xpack.security.authc.realms.ldap1.order: 1
+#xpack.security.authc.realms.ldap1.files.role_mapping: "/Users/mbatth/software/elasticsearch-6.0.1/config/x-pack/role_mapping.yml"
+#xpack.security.authc.realms.ldap1.unmapped_groups_as_roles: false
+
+xpack.security.authc.realms.active_directory.type: active_directory
+xpack.security.authc.realms.active_directory.domain_name: ddmi.intra.renhsc.com
+#xpack.security.authc.realms.active_directory.url: ldaps://miokmsinfwvp02.ddmi.intra.renhsc.com:636,ldaps://miokmsinfwvp01.ddmi.intra.renhsc.com:636
+xpack.security.authc.realms.active_directory.url: ldaps://miokmsinfwvp02.ddmi.intra.renhsc.com:3269,ldaps://miokmsinfwvp01.ddmi.intra.renhsc.com:3269
+xpack.security.authc.realms.active_directory.load_balance.type: "round_robin"
+xpack.security.authc.realms.active_directory.bind_dn: "CN=ELK,OU=Delta Users,DC=ddmi,DC=intra,DC=renhsc,DC=com"
+xpack.security.authc.realms.active_directory.bind_password: Happysilk84
+xpack.security.authc.realms.active_directory.user_search.base_dn: "DC=ddmi,DC=intra,DC=renhsc,DC=com"
+xpack.security.authc.realms.active_directory.group_search.base_dn: "DC=ddmi,DC=intra,DC=renhsc,DC=com"
+xpack.security.authc.realms.active_directory.order: 1
+xpack.security.authc.realms.active_directory.ssl.certificate_authorities: "/Users/mbatth/software/elasticsearch-6.0.1/config/certs/RENDOM.cer"
+
+xpack.security.audit.enabled: true
+xpack.security.audit.logfile.prefix.emit_node_host_address: true
+
+
+# ------------------------------------------------Storage-----------------------------
+index.store.type: niofs
