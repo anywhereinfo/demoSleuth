@@ -5,7 +5,7 @@ while [ $counter -le 10000 ]
 do
 	echo $counter
         ((counter++))
-	curl http://localhost:8080
+	curl http://localhost:8080/elk
         sleep 1
 done
 

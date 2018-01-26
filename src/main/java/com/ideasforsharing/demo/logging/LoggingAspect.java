@@ -52,7 +52,8 @@ public class LoggingAspect {
         } finally {
         		stopWatch.stop();
         		TaskInfo taskInfo = stopWatch.getLastTaskInfo();
-        		log.info("{} {}", keyValue("timing-ms", taskInfo.getTimeMillis()), keyValue("timing-component", joinPoint.getSignature().getDeclaringTypeName()));
+        		log.info("{} {} ", keyValue("timing-ms", taskInfo.getTimeMillis()), 
+        										keyValue("timing-component", joinPoint.getSignature().getDeclaringTypeName() + "/" + joinPoint.getSignature().getName()));
         }
     }
 }
