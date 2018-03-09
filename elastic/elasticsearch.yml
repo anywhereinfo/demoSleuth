@@ -110,13 +110,13 @@ xpack.security.authc.realms.native.order: 0
 
 xpack.security.authc.realms.active_directory.type: active_directory
 xpack.security.authc.realms.active_directory.domain_name: ddmi.intra.renhsc.com
-#xpack.security.authc.realms.active_directory.url: ldaps://miokmsinfwvp02.ddmi.intra.renhsc.com:636,ldaps://miokmsinfwvp01.ddmi.intra.renhsc.com:636
-xpack.security.authc.realms.active_directory.url: ldaps://miokmsinfwvp02.ddmi.intra.renhsc.com:3269,ldaps://miokmsinfwvp01.ddmi.intra.renhsc.com:3269
+#xpack.security.authc.realms.active_directory.url: 
+xpack.security.authc.realms.active_directory.url: 
 xpack.security.authc.realms.active_directory.load_balance.type: "round_robin"
-xpack.security.authc.realms.active_directory.bind_dn: "CN=ELK,OU=Delta Users,DC=ddmi,DC=intra,DC=renhsc,DC=com"
-xpack.security.authc.realms.active_directory.bind_password: Happysilk84
-xpack.security.authc.realms.active_directory.user_search.base_dn: "DC=ddmi,DC=intra,DC=renhsc,DC=com"
-xpack.security.authc.realms.active_directory.group_search.base_dn: "DC=ddmi,DC=intra,DC=renhsc,DC=com"
+xpack.security.authc.realms.active_directory.bind_dn: 
+xpack.security.authc.realms.active_directory.bind_password: 
+xpack.security.authc.realms.active_directory.user_search.base_dn: 
+xpack.security.authc.realms.active_directory.group_search.base_dn: "
 xpack.security.authc.realms.active_directory.order: 1
 xpack.security.authc.realms.active_directory.ssl.certificate_authorities: "/Users/mbatth/software/elasticsearch-6.0.1/config/certs/RENDOM.cer"
 
